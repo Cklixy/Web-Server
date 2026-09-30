@@ -49,7 +49,7 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
 | 8 capítulos / 76 misiones | Existe | FTB Quests |
 | Chat de voz | Existe | Simple Voice Chat |
 | Derribo y reanimación | Existe (desplegado, `winterlandteams` 1.5.x) → `live` | `data/site.json` |
-| Colonias (MineColonies) | **NO instalado en el servidor** → `off` (oculta en la web) | pasar a `live` cuando se despliegue |
+| Colonias (MineColonies 1.1.1300) | Existe (desplegado 2026-09-29) → `live` | `data/site.json` |
 
 ## Estado de los datos
 
