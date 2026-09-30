@@ -138,6 +138,19 @@
     b.classList.add('copied');
     setTimeout(() => { b.textContent = label; b.classList.remove('copied'); }, 2200);
   });
+  // Copiar un dato de site.json (p. ej. la huella): <button data-copy="autopack.fingerprint" data-copied="✓ COPIADO">
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b || !SITE) return;
+    const v = get(SITE, b.dataset.copy);
+    if (!v) return;
+    const label = b.dataset.label || b.textContent;
+    b.dataset.label = label;
+    const ok = await copyText(String(v));
+    b.textContent = ok ? (b.dataset.copied || '✓ COPIADO') : 'Cópialo a mano';
+    b.classList.add('copied');
+    setTimeout(() => { b.textContent = label; b.classList.remove('copied'); }, 2200);
+  });
   document.addEventListener('click', (e) => {
     const d = e.target.closest('a[aria-disabled="true"]');
     if (d) e.preventDefault();

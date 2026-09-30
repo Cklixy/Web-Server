@@ -331,3 +331,11 @@ h1.title[data-size="lg"] { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 9
 
 [hidden] { display: none !important; }
 .pack .mt32 { margin-top: 34px; margin-bottom: 0; }
+
+/* Huella del servidor */
+.fp { text-align: center; padding: clamp(28px, 5vw, 56px); border-radius: 24px; border: 1px solid var(--line); background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02)); }
+.fp .lead { margin-bottom: 26px; }
+.fp-code { display: block; max-width: 760px; margin: 0 auto; padding: 18px 20px; border-radius: 14px; border: 1px dashed rgba(143, 216, 255, .4); background: rgba(143, 216, 255, .06); color: var(--ice); font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: clamp(.78rem, 2.4vw, 1rem); line-height: 1.6; word-break: break-all; letter-spacing: .02em; user-select: all; }
+.fp .mt32 { margin-top: 22px; }
+.fp-note { margin: 22px auto 0; max-width: 60ch; color: var(--gold); font-size: .95rem; }
+.fp-note b { color: #fff; }
