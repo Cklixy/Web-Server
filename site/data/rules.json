@@ -1,0 +1,12 @@
+{
+  "_ayuda": "Reglas REALES del servidor (las 5 del tablon del lobby, config winterlandteams-server.toml). Las categorias sin reglas muestran 'Por definir'. Rellena 'items' cuando la administracion las decida.",
+  "categories": [
+    { "id": "comunidad", "title": "Comunidad", "items": ["Respeta a los demás.", "Diviértete."] },
+    { "id": "gameplay", "title": "Gameplay", "items": ["No cheats ni hacks."] },
+    { "id": "pvp", "title": "PvP", "items": [], "note": "El PvP está activado en el servidor. No hay reglas de PvP escritas todavía." },
+    { "id": "equipos", "title": "Equipos", "items": [] },
+    { "id": "construcciones", "title": "Construcciones", "items": ["No griefing.", "No robar."] },
+    { "id": "bugs", "title": "Bugs y exploits", "items": [] },
+    { "id": "administracion", "title": "Administración", "items": [] }
+  ]
+}

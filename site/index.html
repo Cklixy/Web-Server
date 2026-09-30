@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORGIADECEMBRINA | Minecraft Survival</title>
+<meta name="description" content="ORGIADECEMBRINA: servidor de supervivencia de Minecraft 1.20.1 con mundo nevado, bosses, equipos, misiones y economía. Descarga el AutoPack, copia la IP y a jugar.">
+<meta name="theme-color" content="#060a14">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/server-icon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/server-icon.png">
+<!-- SEO / redes. og:image y og:url necesitan la direccion PUBLICA definitiva de la web: sustituir TU-DOMINIO. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ORGIADECEMBRINA | Minecraft Survival">
+<meta property="og:description" content="Una aventura. Una comunidad. Tu mundo. Descarga el AutoPack y entra al servidor.">
+<meta property="og:image" content="https://TU-DOMINIO/assets/og.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="ORGIADECEMBRINA, inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#inicio">INICIO</a></li>
+      <li><a href="#servidor">SERVIDOR</a></li>
+      <li><a href="#caracteristicas">CARACTERÍSTICAS</a></li>
+      <li><a href="#como-jugar">CÓMO JUGAR</a></li>
+      <li><a href="autopack.html">AUTOPACK</a></li>
+      <li><a href="reglas.html">REGLAS</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#comunidad">COMUNIDAD</a></li>
+      <li class="play"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">JUGAR AHORA</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- 1. HERO -->
+<section class="hero" id="inicio">
+  <div class="sky"></div>
+  <canvas class="stars" id="stars" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <!-- Montañas: capas SVG propias (no imágenes externas). Sustituibles por una captura real del servidor. -->
+  <svg class="ridge" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true"><path fill="#16295a" d="M0 260 L120 190 L210 240 L340 120 L430 200 L520 150 L640 250 L780 100 L900 210 L990 160 L1120 240 L1240 130 L1340 200 L1440 150 V420 H0Z"/><path fill="#dfeeff" opacity=".55" d="M340 120 L310 152 L338 146 L358 160 L380 146 Z M780 100 L748 138 L776 130 L800 146 L822 130 Z M1240 130 L1212 160 L1238 154 L1260 166 L1282 152 Z"/></svg>
+  <svg class="ridge" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true"><path fill="#0d1a3d" d="M0 250 L90 210 L200 260 L330 190 L460 265 L580 200 L700 270 L830 180 L960 262 L1090 205 L1210 268 L1330 210 L1440 250 V360 H0Z"/></svg>
+  <svg class="ridge" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+    <defs><g id="pine"><path d="M0 -46 L14 -18 L7 -18 L18 4 L8 4 L20 30 L-20 30 L-8 4 L-18 4 L-7 -18 L-14 -18Z"/></g></defs>
+    <path fill="#060a14" d="M0 210 C200 170 320 250 520 220 C720 190 860 250 1060 215 C1240 185 1340 230 1440 205 V300 H0Z"/>
+    <g fill="#060a14"><use href="#pine" x="60" y="200"/><use href="#pine" x="130" y="215" transform="translate(0,0) scale(.8)" /><use href="#pine" x="300" y="222"/><use href="#pine" x="380" y="218"/><use href="#pine" x="610" y="216"/><use href="#pine" x="690" y="226"/><use href="#pine" x="900" y="225"/><use href="#pine" x="980" y="214"/><use href="#pine" x="1180" y="206"/><use href="#pine" x="1260" y="212"/><use href="#pine" x="1390" y="200"/></g>
+  </svg>
+
+  <div class="wrap content">
+    <span class="eyebrow pixel rv">❄ Minecraft <span data-bind="server.version">1.20.1</span> · Supervivencia</span>
+    <h1 class="rv"><span class="flake" aria-hidden="true">❄</span> <span data-bind="server.name">ORGIADECEMBRINA</span> <span class="flake" aria-hidden="true">❄</span></h1>
+    <p class="tag rv" data-bind="server.tagline">Una aventura. Una comunidad. Tu mundo.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-primary btn-xl" href="autopack.html#descargar">DESCARGAR AUTOPACK</a>
+      <a class="btn btn-xl" href="#como-jugar">CÓMO JUGAR</a>
+    </div>
+  </div>
+  <div class="scroll-hint pixel" aria-hidden="true">Desliza</div>
+</section>
+
+<!-- 2. AUTOPACK -->
+<section class="autopack-band" id="autopack">
+  <div class="wrap">
+    <div class="pack rv">
+      <span class="kicker pixel">Todo lo que necesitas para jugar</span>
+      <h2>UN SOLO PACK.<br>TODO PREPARADO.</h2>
+      <p>No necesitas descargar los mods uno por uno. Descarga nuestro AutoPack y tendrás todo lo necesario para entrar al servidor.</p>
+      <a class="btn btn-primary btn-xl" href="autopack.html#descargar">DESCARGAR AUTOPACK</a>
+      <p class="note">Una descarga. Una IP. A jugar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CÓMO JUGAR -->
+<section class="alt" id="como-jugar">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker pixel">Empieza en 4 pasos</span>
+      <h2 class="title">CÓMO JUGAR</h2>
+      <p class="lead">Aunque nunca hayas entrado al servidor: sigue los pasos en orden y ya estás dentro.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>DESCARGA EL AUTOPACK</h3><p>Descarga el archivo oficial desde la <a href="autopack.html#descargar">página del AutoPack</a>.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>INSTÁLALO</h3><p>Sigue las instrucciones que acompañan a la descarga. Es lo único que tienes que instalar.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>ABRE MINECRAFT</h3><p>Inicia Minecraft <span data-bind="server.version">1.20.1</span> con la configuración que te proporciona el AutoPack.</p></div>
+      <div class="step rv"><div class="n">04</div><h3>ENTRA AL SERVIDOR</h3><p>Añade el servidor con esta IP: <code data-bind="server.ip">—</code></p></div>
+    </div>
+    <div class="ipbox rv">
+      <code data-bind="server.ip">—</code>
+      <button class="btn btn-primary" type="button" data-copy-ip>COPIAR IP</button>
+    </div>
+    <div class="firsttime rv"><b>La primera vez que entres:</b> el servidor te pedirá crear tu cuenta. Escribe <code>/register contraseña contraseña</code> en el chat. Las siguientes veces solo tendrás que escribir <code>/login contraseña</code>.</div>
+  </div>
+</section>
+
+<!-- 4. QUÉ ES EL SERVIDOR + 10. INFORMACIÓN -->
+<section id="servidor">
+  <div class="wrap two">
+    <div class="rv">
+      <span class="kicker pixel">El servidor</span>
+      <h2 class="title">UNA SUPERVIVENCIA CON MUCHO POR DESCUBRIR</h2>
+      <p class="lead">Un mundo nevado para vivir en equipo: exploras montañas y cuevas enormes, enfrentas bosses, reúnes copos, cumples misiones y construyes tu base con tus amigos.</p>
+      <ul class="list">
+        <li>Un mundo eternamente nevado, con ambiente navideño.</li>
+        <li>Relieve nuevo con montañas altas, cuevas gigantes y ríos subterráneos.</li>
+        <li>Bosses, dragones y mazmorras por todo el mundo.</li>
+        <li>Equipos, homes, TPA y territorio propio.</li>
+        <li>Economía con moneda propia, tienda, trabajos y casino.</li>
+        <li>Ruleta de eventos que sacude la partida cada pocos minutos.</li>
+        <li>Chat de voz de proximidad.</li>
+        <li data-feature="colonias">Colonias para construir un pueblo entre todos <span class="badge">Próximamente</span></li>
+        <li data-feature="derribo">Sistema de derribo y reanimación <span class="badge">Próximamente</span></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="card">
+        <span class="kicker pixel">Información del servidor</span>
+        <dl class="info info-2">
+          <div class="span2"><dt>IP</dt><dd><code data-bind="server.ip">—</code></dd></div>
+          <div><dt>Versión</dt><dd data-bind="server.version">—</dd></div>
+          <div><dt>Modpack</dt><dd>AutoPack</dd></div>
+          <div><dt>Tipo</dt><dd data-bind="server.type">—</dd></div>
+          <div><dt>Capacidad</dt><dd data-bind="server.capacity">—</dd></div>
+        </dl>
+        <p class="actions"><button class="btn btn-primary" type="button" data-copy-ip>COPIAR IP</button><a class="btn" href="#como-jugar">CÓMO JUGAR</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CARACTERÍSTICAS -->
+<section class="alt" id="caracteristicas">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker pixel">Qué te espera</span>
+      <h2 class="title">CARACTERÍSTICAS</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><div class="ico">🌎</div><h3>EXPLORACIÓN</h3><p>Descubre montañas altas, cuevas gigantes, ríos subterráneos, aldeas, torres y estructuras repartidas por un mundo nuevo.</p></article>
+      <article class="card rv"><div class="ico">⚔️</div><h3>AVENTURA</h3><p>Enfréntate a bosses con sus mazmorras, dragones y criaturas por todo el mundo. Cada expedición es un reto.</p></article>
+      <article class="card rv"><div class="ico">👥</div><h3>EQUIPOS</h3><p>Forma un equipo de hasta 4 jugadores, elige vuestro color y sobrevivan juntos.</p></article>
+      <article class="card rv"><div class="ico">🏠</div><h3>SUPERVIVENCIA</h3><p>Construye tu base, reclama territorio para tu equipo y desarrolla tu propio rincón nevado.</p></article>
+      <article class="card rv"><div class="ico">✨</div><h3>PROGRESIÓN</h3><p>Una campaña de 8 capítulos y 76 misiones con recompensas en copos y experiencia para seguir avanzando.</p></article>
+      <article class="card rv"><div class="ico">❄️</div><h3>ECONOMÍA</h3><p>Gana copos con la recompensa diaria y seis trabajos, gástalos en la tienda o pruébalos en el casino.</p></article>
+      <article class="card rv"><div class="ico">🎲</div><h3>EVENTOS</h3><p>Una ruleta lanza eventos al azar durante la partida: sorpresas, caos y regalos. No rompe bloques ni mata jugadores.</p></article>
+      <article class="card rv" data-feature="derribo"><div class="ico">💀</div><h3>DERRIBO Y REANIMACIÓN<span class="badge">Próximamente</span></h3><p>Cuando un jugador cae, sus compañeros pueden intentar reanimarlo antes de que se acabe el tiempo.</p></article>
+      <article class="card rv" data-feature="colonias"><div class="ico">🏘️</div><h3>COLONIAS<span class="badge">Próximamente</span></h3><p>Funda una colonia, gestiona colonos y levanta un pueblo entre todos.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. EQUIPOS -->
+<section id="equipos">
+  <div class="wrap two">
+    <div class="rv">
+      <span class="kicker pixel">Sistema de equipos</span>
+      <h2 class="title">JUEGA CON<br>TUS AMIGOS</h2>
+      <p class="lead">Crea tu equipo, invita a tus amigos y compartan hogar, territorio y progreso.</p>
+      <ul class="list">
+        <li><span><b>Equipos de hasta 4 jugadores.</b> <small>Invitas con un comando y tu amigo acepta.</small></span></li>
+        <li><span><b>Colores propios.</b> <small>El líder elige el color del equipo.</small></span></li>
+        <li><span><b>Identificación en TAB.</b> <small>Ves quién es de tu equipo y quién lidera.</small></span></li>
+        <li><span><b>Homes de equipo.</b> <small>Guarda puntos y vuelve con <code>/home</code>.</small></span></li>
+        <li><span><b>TPA.</b> <small>Pide teletransportarte hasta un amigo.</small></span></li>
+        <li><span><b>Territorio protegido.</b> <small>Reclama una zona con <code>/equipo claim</code>.</small></span></li>
+        <li><span><b>Permisos.</b> <small>Da acceso a jugadores de confianza con <code>/equipo trust</code>.</small></span></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="teamcard" aria-label="Ejemplo de la lista TAB con equipos">
+        <div class="pixel tab-title">Así se ve en TAB (ejemplo)</div>
+        <div class="tab">
+          <p class="head-row">❄ ORGIADECEMBRINA ❄</p>
+          <p class="c1"><b>★ [Frost]</b> Juan</p>
+          <p class="c1"><b>[Frost]</b> Pedro</p>
+          <p class="c2"><b>★ [Aurora]</b> Carlos</p>
+          <p class="c2"><b>[Aurora]</b> Dani</p>
+        </div>
+        <div class="cmds"><span>/equipo create</span><span>/equipo invite</span><span>/equipo accept</span><span>/equipo color</span><span>/equipo claim</span><span>/home</span><span>/tpa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. DERRIBO -->
+<section class="downed" id="derribo" data-feature="derribo">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker pixel">Sistema de derribo <span class="badge">Próximamente</span></span>
+      <h2 class="title">NO ES EL FINAL</h2>
+      <p class="lead">Cuando un jugador recibe daño letal, puede quedar derribado durante un tiempo limitado. Sus compañeros deben llegar hasta él y reanimarlo antes de que el tiempo termine.</p>
+    </div>
+    <div class="flow">
+      <div class="st rv"><div class="em">☠️</div><h3>Derribado</h3><p>El daño letal te deja en el suelo, brillando para que te encuentren.</p></div>
+      <div class="st rv"><div class="em">⏱️</div><h3>Tiempo restante</h3><p>Tienes unos <b data-derribo="downedSeconds">30</b> segundos. Cada uno cuenta.</p></div>
+      <div class="st rv"><div class="em">❤️</div><h3>Reanimando</h3><p>Un compañero mantiene clic derecho sobre ti unos <b data-derribo="reviveSeconds">5</b> segundos.</p></div>
+      <div class="st rv"><div class="em">✨</div><h3>¡Revivido!</h3><p>Vuelves a la partida y un instante de invulnerabilidad te da aire.</p></div>
+    </div>
+    <div class="facts rv"><span><b>Cooperación</b> — no dejes a nadie atrás</span><span><b>Tensión</b> — el reloj no se detiene</span></div>
+  </div>
+</section>
+
+<!-- 8. EXPLORACIÓN -->
+<section class="alt" id="exploracion">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker pixel">Exploración</span>
+      <h2 class="title">UN MUNDO NUEVO<br>POR DESCUBRIR</h2>
+      <p class="lead">El mundo se generó desde cero hace muy poco: casi todo está sin explorar. Aquí puedes ver capturas reales del servidor a medida que las vayamos publicando.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ico">⛰️</div><h3>Montañas y cuevas</h3><p>Relieve alto y cuevas de gran tamaño, con ríos que corren bajo tierra.</p></div>
+      <div class="card rv"><div class="ico">🏰</div><h3>Estructuras y mazmorras</h3><p>Torres, castillos, aldeas y mazmorras para explorar con amigos.</p></div>
+      <div class="card rv"><div class="ico">🐉</div><h3>Bosses y dragones</h3><p>Jefes con sus propias mazmorras y dragones que dominan sus territorios.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. GALERÍA -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker pixel">Galería</span>
+      <h2 class="title">MOMENTOS DEL SERVIDOR</h2>
+    </div>
+    <div class="gallery" id="gallery" aria-live="polite"><p class="empty">Cargando galería…</p></div>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada"><img alt=""></div>
+</section>
+
+<!-- 13. NOVEDADES -->
+<section class="alt" id="novedades">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker pixel">Novedades</span>
+      <h2 class="title">LO ÚLTIMO EN EL SERVIDOR</h2>
+    </div>
+    <div class="news" id="news" data-max="5"><p class="empty">Cargando novedades…</p></div>
+  </div>
+</section>
+
+<!-- 15. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker pixel">Preguntas frecuentes</span>
+      <h2 class="title">FAQ</h2>
+    </div>
+    <div class="faq">
+      <details class="rv"><summary>¿Qué necesito para jugar?</summary><div class="a">Minecraft Java Edition <span data-bind="server.version">1.20.1</span> y el AutoPack. Nada más.</div></details>
+      <details class="rv"><summary>¿Tengo que descargar los mods individualmente?</summary><div class="a">No. El AutoPack trae todo lo necesario para entrar al servidor.</div></details>
+      <details class="rv"><summary>¿Puedo jugar con mis amigos?</summary><div class="a">Sí. Puedes crear un equipo de hasta 4 jugadores, compartir homes y territorio, y usar TPA para reuniros.</div></details>
+      <details class="rv"><summary>¿Cuál es la IP?</summary><div class="a"><code data-bind="server.ip">—</code> &nbsp; <button class="btn btn-sm" type="button" data-copy-ip>COPIAR IP</button></div></details>
+      <details class="rv"><summary>¿Qué versión utiliza?</summary><div class="a">Minecraft <span data-bind="server.version">1.20.1</span> (<span data-bind="server.loader">Forge</span>). El AutoPack ya lo configura por ti.</div></details>
+      <details class="rv"><summary>¿Dónde descargo el AutoPack?</summary><div class="a"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div></details>
+      <details class="rv"><summary>¿Cómo creo mi cuenta en el servidor?</summary><div class="a">La primera vez que entres escribe <code>/register contraseña contraseña</code>. Después, en cada sesión, <code>/login contraseña</code>.</div></details>
+      <details class="rv"><summary>¿Dónde puedo pedir ayuda?</summary><div class="a">En nuestro <a href="#comunidad">Discord</a>: allí también se publica el estado del servidor.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 16. COMUNIDAD -->
+<section class="alt community" id="comunidad">
+  <div class="wrap">
+    <div class="disc rv">
+      <span class="kicker pixel">Comunidad</span>
+      <h2 class="title">ÚNETE A LA COMUNIDAD</h2>
+      <p class="lead mx">Habla con el resto de jugadores, pide ayuda y consulta el estado del servidor, que se publica en nuestro Discord.</p>
+      <p class="mt32"><a class="btn btn-discord btn-xl" data-href="community.discord" data-newtab data-pending-label="DISCORD (ENLACE PENDIENTE)" href="#">UNIRME AL DISCORD</a></p>
+      <span class="placeholder-tag" data-missing-note="community.discord" hidden>Placeholder · configura community.discord en data/site.json</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+      <nav aria-label="Pie"><a href="autopack.html">AutoPack</a><a href="reglas.html">Reglas</a><a href="#faq">FAQ</a><a href="#comunidad">Comunidad</a></nav>
+    </div>
+    <p class="legal">Sitio no oficial de Minecraft. No está afiliado a Mojang Studios ni a Microsoft. Minecraft es una marca de Mojang Studios.</p>
+  </div>
+</footer>
+
+<div class="mcta"><a class="btn btn-primary" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div>
+</body>
+</html>

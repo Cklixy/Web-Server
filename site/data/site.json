@@ -1,0 +1,30 @@
+{
+  "_ayuda": "Edita este archivo para cambiar la web SIN reconstruirla. Cadena vacia = se muestra [PENDIENTE] y el boton se desactiva.",
+  "server": {
+    "name": "ORGIADECEMBRINA",
+    "tagline": "Una aventura. Una comunidad. Tu mundo.",
+    "ip": "orgiadecembrina.duckdns.org",
+    "version": "1.20.1",
+    "loader": "Forge 47.4.0",
+    "type": "Supervivencia",
+    "capacity": "16 jugadores"
+  },
+  "autopack": {
+    "url": "",
+    "version": "",
+    "updated": "",
+    "size": "",
+    "history": []
+  },
+  "community": {
+    "discord": ""
+  },
+  "features": {
+    "derribo": "soon",
+    "colonias": "soon"
+  },
+  "derribo": {
+    "downedSeconds": 30,
+    "reviveSeconds": 5
+  }
+}

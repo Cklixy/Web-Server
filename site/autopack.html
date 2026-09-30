@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AutoPack | ORGIADECEMBRINA</title>
+<meta name="description" content="Descarga el AutoPack de ORGIADECEMBRINA: todo lo necesario para entrar al servidor de Minecraft en una sola descarga.">
+<meta name="theme-color" content="#060a14">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/server-icon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/server-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AutoPack | ORGIADECEMBRINA">
+<meta property="og:description" content="Descarga el AutoPack de ORGIADECEMBRINA: todo lo necesario para entrar al servidor de Minecraft en una sola descarga.">
+<meta property="og:image" content="https://TU-DOMINIO/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html#inicio" aria-label="ORGIADECEMBRINA, inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#inicio">INICIO</a></li>
+      <li><a href="index.html#servidor">SERVIDOR</a></li>
+      <li><a href="index.html#caracteristicas">CARACTERÍSTICAS</a></li>
+      <li><a href="index.html#como-jugar">CÓMO JUGAR</a></li>
+      <li><a href="autopack.html" aria-current="page">AUTOPACK</a></li>
+      <li><a href="reglas.html">REGLAS</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#comunidad">COMUNIDAD</a></li>
+      <li class="play"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">JUGAR AHORA</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker pixel">Descarga oficial</span>
+    <h1 class="title" data-size="xl">AUTOPACK</h1>
+    <p class="lead mx">Todo lo necesario para entrar al servidor en una sola descarga.</p>
+  </div>
+</section>
+<section id="descargar">
+  <div class="wrap">
+    <div class="pack rv">
+      <dl class="meta">
+        <div><dt>Versión</dt><dd data-bind="autopack.version">—</dd></div>
+        <div><dt>Última actualización</dt><dd data-bind="autopack.updated">—</dd></div>
+        <div><dt>Tamaño</dt><dd data-bind="autopack.size">—</dd></div>
+      </dl>
+      <p class="mt32"><a class="btn btn-primary btn-xl" data-href="autopack.url" data-newtab data-pending-label="DESCARGA PRÓXIMAMENTE" href="#">DESCARGAR AUTOPACK</a></p>
+      <span class="placeholder-tag" data-missing-note="autopack.url" hidden>Placeholder · configura autopack.url, version, updated y size en data/site.json</span>
+      <p class="note">No necesitas descargar los mods individualmente.</p>
+    </div>
+  </div>
+</section>
+<section class="alt">
+  <div class="wrap">
+    <div class="head center rv"><span class="kicker pixel">Después de descargar</span><h2 class="title">ASÍ SE USA</h2></div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>INSTÁLALO</h3><p>Sigue las instrucciones que acompañan a la descarga.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>ABRE MINECRAFT</h3><p>Minecraft <span data-bind="server.version">1.20.1</span>, con la configuración del AutoPack.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>COPIA LA IP</h3><p><code data-bind="server.ip">—</code></p></div>
+      <div class="step rv"><div class="n">04</div><h3>ENTRA</h3><p>Crea tu cuenta la primera vez con <code>/register</code>.</p></div>
+    </div>
+    <div class="ipbox rv"><code data-bind="server.ip">—</code><button class="btn btn-primary" type="button" data-copy-ip>COPIAR IP</button></div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="head center rv"><span class="kicker pixel">Versiones</span><h2 class="title">HISTORIAL DEL AUTOPACK</h2></div>
+    <div class="history rv" id="history"><p class="empty">Cargando…</p></div>
+  </div>
+</section>
+<section class="alt">
+  <div class="wrap">
+    <div class="faq">
+      <details class="rv"><summary>El AutoPack me pide confirmar el servidor. ¿Qué hago?</summary><div class="a">Es una comprobación de seguridad de la primera conexión. Confirma la huella con la administración en nuestro Discord antes de aceptar.</div></details>
+      <details class="rv"><summary>¿Necesito algo más aparte del AutoPack?</summary><div class="a">Solo Minecraft Java Edition <span data-bind="server.version">1.20.1</span>.</div></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html#inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+      <nav aria-label="Pie"><a href="autopack.html">AutoPack</a><a href="reglas.html">Reglas</a><a href="index.html#faq">FAQ</a><a href="index.html#comunidad">Comunidad</a></nav>
+    </div>
+    <p class="legal">Sitio no oficial de Minecraft. No está afiliado a Mojang Studios ni a Microsoft. Minecraft es una marca de Mojang Studios.</p>
+  </div>
+</footer>
+
+<div class="mcta"><a class="btn btn-primary" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div>
+</body>
+</html>
