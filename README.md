@@ -53,8 +53,8 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
 
 ## Estado de los datos
 
-- **AutoPack** = el mod AutoModpack 4.0.6 (Forge 1.20.1, 14,7 MB, CurseForge). Se instala **dentro del perfil del modpack Winterland 9.6.0**
-  (así lo documenta el servidor); por eso los pasos de «Cómo jugar» mencionan Winterland. Enlaces en `data/site.json` (`autopack`, `modpack`).
+- **AutoPack** = el mod AutoModpack 4.0.6 (Forge 1.20.1, 14,7 MB, CurseForge). Es lo único que el jugador descarga (decisión del dueño); el enlace
+  y los datos están en `data/site.json` (`autopack`). Hace falta Minecraft 1.20.1 con Forge para ejecutarlo.
 - Discord y dominio público (`server-sand-rho.vercel.app`) configurados; IP pública mostrada a propósito (decisión del dueño).
 - La web **no tiene galería**: se eliminó por decisión del dueño.
 - **Reglas**: solo existen las 5 del tablón del lobby; las categorías PvP, Equipos y Bugs/exploits siguen "Por definir".

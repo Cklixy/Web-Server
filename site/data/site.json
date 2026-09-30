@@ -31,10 +31,5 @@
   "derribo": {
     "downedSeconds": 30,
     "reviveSeconds": 5
-  },
-  "modpack": {
-    "name": "Winterland",
-    "version": "9.6.0",
-    "url": "https://www.curseforge.com/minecraft/modpacks/winterland-a-magical-christmas-journey"
   }
 }
