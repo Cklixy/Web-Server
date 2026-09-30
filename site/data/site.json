@@ -25,11 +25,12 @@
     "discord": "https://discord.gg/hqyKAYfjtb"
   },
   "features": {
-    "derribo": "soon",
-    "colonias": "soon"
+    "derribo": "live",
+    "colonias": "off"
   },
   "derribo": {
     "downedSeconds": 30,
     "reviveSeconds": 5
-  }
+  },
+  "_features": "live = activa; soon = muestra PROXIMAMENTE; off = oculta"
 }

@@ -1,12 +1,67 @@
 {
-  "_ayuda": "Reglas REALES del servidor (las 5 del tablon del lobby, config winterlandteams-server.toml). Las categorias sin reglas muestran 'Por definir'. Rellena 'items' cuando la administracion las decida.",
+  "_ayuda": "Reglas del servidor. Edita 'items' de cada categoria; el orden se respeta. Una categoria sin items se muestra vacia.",
   "categories": [
-    { "id": "comunidad", "title": "Comunidad", "items": ["Respeta a los demás.", "Diviértete."] },
-    { "id": "gameplay", "title": "Gameplay", "items": ["No cheats ni hacks."] },
-    { "id": "pvp", "title": "PvP", "items": [], "note": "El PvP está activado en el servidor. No hay reglas de PvP escritas todavía." },
-    { "id": "equipos", "title": "Equipos", "items": [] },
-    { "id": "construcciones", "title": "Construcciones", "items": ["No griefing.", "No robar."] },
-    { "id": "bugs", "title": "Bugs y exploits", "items": [] },
-    { "id": "administracion", "title": "Administración", "items": [] }
+    {
+      "id": "comunidad", "title": "Comunidad",
+      "items": [
+        "Respeta a todos los jugadores y a la administración: sin insultos, acoso, amenazas ni discriminación.",
+        "Nada de spam, publicidad ni enlaces a otros servidores.",
+        "Usa el chat con educación. En el Discord rigen las mismas normas.",
+        "Ayuda a los jugadores nuevos y diviértete."
+      ]
+    },
+    {
+      "id": "gameplay", "title": "Gameplay",
+      "items": [
+        "Prohibidos los cheats, hacks, x-ray, autoclickers y cualquier modificación que dé ventaja injusta.",
+        "No uses más de una cuenta para obtener ventajas.",
+        "No crees granjas, máquinas ni redstone que hagan bajar el rendimiento del servidor. Si te lo piden, desmóntalos.",
+        "No compartas tu contraseña. La administración nunca te la pedirá."
+      ]
+    },
+    {
+      "id": "pvp", "title": "PvP",
+      "items": [
+        "El PvP está activado: ataca solo a quien acepte pelear.",
+        "Prohibido matar repetidamente al mismo jugador o esperarlo donde reaparece.",
+        "No hagas PvP en el lobby ni en el campamento de bienvenida.",
+        "Respeta el resultado de un combate: sin venganzas ni acoso fuera del juego."
+      ]
+    },
+    {
+      "id": "equipos", "title": "Equipos",
+      "items": [
+        "Los equipos son de un máximo de 4 jugadores.",
+        "No engañes ni expulses a un compañero para quedarte con sus homes o su territorio.",
+        "Respeta el territorio de otros equipos: no reclames zonas para bloquear caminos, portales o el spawn.",
+        "Da acceso a tu territorio solo a jugadores de confianza: eres responsable de lo que hagan."
+      ]
+    },
+    {
+      "id": "construcciones", "title": "Construcciones",
+      "items": [
+        "No griefing: no destruyas ni modifiques construcciones de otros sin permiso.",
+        "No robar, ni de cofres sin protección ni de bases ajenas.",
+        "Construye a una distancia razonable de otras bases y no bloquees los accesos de los demás.",
+        "No construyas en el lobby ni en el campamento de bienvenida."
+      ]
+    },
+    {
+      "id": "bugs", "title": "Bugs y exploits",
+      "items": [
+        "Prohibido abusar de bugs, duplicar objetos o explotar fallos del juego.",
+        "Prohibido explotar la economía, la tienda, los trabajos o el casino con fallos o trucos.",
+        "Si encuentras un bug, avisa a la administración en Discord en lugar de aprovecharlo."
+      ]
+    },
+    {
+      "id": "administracion", "title": "Administración",
+      "items": [
+        "Las decisiones de la administración son definitivas. Si no estás de acuerdo, díselo con respeto en Discord, no en el chat.",
+        "Romper las reglas puede acabar en advertencia, expulsión temporal o baneo, según la gravedad.",
+        "No pidas rangos ni permisos de administración.",
+        "Las reglas pueden actualizarse: al jugar en el servidor aceptas las vigentes."
+      ]
+    }
   ]
 }

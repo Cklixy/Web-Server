@@ -166,7 +166,9 @@
     $$('[data-missing-note]').forEach((n) => { n.hidden = !!get(data, n.dataset.missingNote); });
     // Funciones anunciadas: "soon" muestra PRÓXIMAMENTE; "live" lo quita.
     $$('[data-feature]').forEach((n) => {
-      const soon = get(data, 'features.' + n.dataset.feature) !== 'live';
+      const state = get(data, 'features.' + n.dataset.feature) || 'off';
+      n.hidden = state === 'off';
+      const soon = state === 'soon';
       n.classList.toggle('soon', soon);
       $$('.badge', n).forEach((b) => { b.hidden = !soon; });
     });
@@ -217,8 +219,6 @@
         card.append(el('h3', '', c.title));
         if (c.items?.length) {
           const ol = el('ol'); c.items.forEach((t) => ol.append(el('li', '', t))); card.append(ol);
-        } else {
-          card.append(el('p', 'tbd', 'Por definir por la administración.'));
         }
         if (c.note) card.append(el('p', 'note', c.note));
         rulesBox.append(card); watch(card);

@@ -35,7 +35,7 @@ Los enlaces solo se aceptan si son `https://`.
 | Poner el Discord | `data/site.json` → `community.discord` |
 | Anunciar algo | `data/news.json` (fecha `AAAA-MM-DD`; se ordena solo, se muestran las 5 últimas) |
 | Cambiar reglas | `data/rules.json` |
-| Activar el derribo / las colonias | `data/site.json` → `features.derribo` / `features.colonias` = `"live"` (quita el aviso PRÓXIMAMENTE) |
+| Mostrar u ocultar derribo / colonias | `data/site.json` → `features.derribo` / `features.colonias` = `"live"` (activa), `"soon"` (con aviso PRÓXIMAMENTE) u `"off"` (oculta) |
 
 Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una etiqueta de placeholder.
 
@@ -48,8 +48,8 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
 | Economía (copos, tienda, trabajos, casino), ruleta de eventos | Existe | `winterlandteams` |
 | 8 capítulos / 76 misiones | Existe | FTB Quests |
 | Chat de voz | Existe | Simple Voice Chat |
-| **Derribo y reanimación** | **En desarrollo, sin desplegar** → `soon` | código sin commitear en `winterlandteams/.../downed` |
-| **Colonias (MineColonies)** | **Probado en TestServer, sin desplegar** → `soon` | pendiente de aprobación |
+| Derribo y reanimación | Existe (desplegado, `winterlandteams` 1.5.x) → `live` | `data/site.json` |
+| Colonias (MineColonies) | **NO instalado en el servidor** → `off` (oculta en la web) | pasar a `live` cuando se despliegue |
 
 ## Estado de los datos
 
@@ -57,7 +57,7 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
   y los datos están en `data/site.json` (`autopack`). Hace falta Minecraft 1.20.1 con Forge para ejecutarlo.
 - Discord y dominio público (`server-sand-rho.vercel.app`) configurados; IP pública mostrada a propósito (decisión del dueño).
 - La web **no tiene galería**: se eliminó por decisión del dueño.
-- **Reglas**: solo existen las 5 del tablón del lobby; las categorías PvP, Equipos y Bugs/exploits siguen "Por definir".
+- **Reglas**: las 5 originales del tablón del lobby más reglas básicas de servidor redactadas para las 7 categorías (`data/rules.json`). Revisarlas y ajustar a gusto.
 
 ## Seguridad y rendimiento
 
