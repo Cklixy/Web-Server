@@ -191,21 +191,6 @@ dl.info { margin-bottom: 0; }
 .facts span { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass); color: #cfdcf5; font-size: .9rem; }
 .facts b { color: #fff; }
 
-/* Gallery */
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.shot { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 16/10; background: var(--bg-3); cursor: zoom-in; transition: transform .35s, border-color .35s, box-shadow .35s; }
-.shot:nth-child(1), .shot:nth-child(4) { grid-column: span 2; aspect-ratio: 16/9; }
-.shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
-.shot:hover { transform: translateY(-3px); border-color: rgba(160, 200, 255, .4); box-shadow: 0 0 40px -8px rgba(143, 216, 255, .35); }
-.shot:hover img { transform: scale(1.06); }
-.shot figcaption { position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(3, 6, 15, .9)); font-size: .92rem; }
-.shot figcaption small { display: block; color: var(--ice); font: 400 .6rem var(--font-pixel); text-transform: uppercase; margin-bottom: 4px; }
-.shot.ph { cursor: default; background:
-  repeating-linear-gradient(45deg, rgba(143, 216, 255, .04) 0 14px, transparent 14px 28px), linear-gradient(135deg, #10204a, #0a1330 60%, #2a1224); }
-.shot.ph::after { content: "PLACEHOLDER · sustituir en data/gallery.json"; position: absolute; top: 14px; left: 14px; font: 400 .58rem var(--font-pixel); color: var(--gold); border: 1px dashed rgba(255, 207, 138, .5); padding: 4px 8px; border-radius: 6px; }
-.lightbox { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; background: rgba(3, 6, 15, .92); padding: 24px; cursor: zoom-out; }
-.lightbox.open { display: grid; }
-.lightbox img { max-height: 88vh; border-radius: 12px; box-shadow: var(--shadow); }
 
 /* News */
 .news { display: grid; gap: 16px; }
@@ -292,10 +277,6 @@ footer { padding: 56px 0 110px; border-top: 1px solid var(--line); background: #
   .flow { grid-template-columns: 1fr; gap: 6px; }
   .flow .st + .st::before { content: "⌄"; left: 50%; top: -22px; translate: -50% 0; }
   .post { grid-template-columns: 1fr; gap: 6px; padding: 20px; }
-  /* galeria: carrusel horizontal con snap en vez de rejilla */
-  .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: -16px; padding: 0 16px 8px; scrollbar-width: none; }
-  .gallery::-webkit-scrollbar { display: none; }
-  .shot, .shot:nth-child(1), .shot:nth-child(4) { flex: 0 0 82%; aspect-ratio: 4/3; scroll-snap-align: center; }
   .ipbox code { font-size: 1rem; }
   .history .row { flex-direction: column; gap: 4px; }
   .mcta { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; display: flex; }
@@ -340,11 +321,6 @@ h1.title[data-size="lg"] { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 9
 .ridge:nth-of-type(2) { height: clamp(190px, 31vh, 350px); }
 .ridge:nth-of-type(3) { height: clamp(140px, 22vh, 270px); }
 @media (max-width: 720px) { .hero .content { padding-bottom: 150px; } }
-@media (min-width: 721px) {
-  .gallery { grid-auto-rows: clamp(200px, 21vw, 300px); }
-  .shot, .shot:nth-child(1), .shot:nth-child(4) { aspect-ratio: auto; }
-  .shot:nth-child(1), .shot:nth-child(4), .shot:nth-child(6) { grid-column: span 2; }
-}
 .post { grid-template-columns: 200px 1fr; }
 @media (max-width: 720px) { .post { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .hero h1 { font-size: clamp(1.5rem, 7.7vw, 2.9rem); letter-spacing: 0; } .hero h1 .flake { font-size: .6em; margin-inline: .08em; } .eyebrow { font-size: .6rem; padding: 7px 12px; } }
@@ -352,3 +328,6 @@ h1.title[data-size="lg"] { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 9
 .menu a.btn-primary, .menu a.btn-primary:hover { background: linear-gradient(135deg, var(--red-2), var(--red) 55%, #b8182f); }
 .menu a.btn-sm { padding: 10px 18px; font-size: .78rem; }
 @media (max-width: 900px) { .menu a.btn-sm { padding: 16px; font-size: .9rem; } }
+
+[hidden] { display: none !important; }
+.pack .mt32 { margin-top: 34px; margin-bottom: 0; }

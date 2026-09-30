@@ -10,11 +10,14 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/server-icon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/server-icon.png">
-<!-- SEO / redes. og:image y og:url necesitan la direccion PUBLICA definitiva de la web: sustituir TU-DOMINIO. -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://server-sand-rho.vercel.app/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://server-sand-rho.vercel.app/">
 <meta property="og:title" content="ORGIADECEMBRINA | Minecraft Survival">
 <meta property="og:description" content="Una aventura. Una comunidad. Tu mundo. Descarga el AutoPack y entra al servidor.">
-<meta property="og:image" content="https://TU-DOMINIO/assets/og.png">
+<meta property="og:image" content="https://server-sand-rho.vercel.app/assets/og.png">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,8 +100,8 @@
     </div>
     <div class="steps">
       <div class="step rv"><div class="n">01</div><h3>DESCARGA EL AUTOPACK</h3><p>Descarga el archivo oficial desde la <a href="autopack.html#descargar">página del AutoPack</a>.</p></div>
-      <div class="step rv"><div class="n">02</div><h3>INSTÁLALO</h3><p>Sigue las instrucciones que acompañan a la descarga. Es lo único que tienes que instalar.</p></div>
-      <div class="step rv"><div class="n">03</div><h3>ABRE MINECRAFT</h3><p>Inicia Minecraft <span data-bind="server.version">1.20.1</span> con la configuración que te proporciona el AutoPack.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>INSTÁLALO</h3><p>Instala el modpack <a href="#" data-href="modpack.url" data-newtab>Winterland <span data-bind="modpack.version">9.6.0</span></a> desde la app de CurseForge y copia el AutoPack en la carpeta <code>mods</code> de ese perfil.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>ABRE MINECRAFT</h3><p>Inicia el perfil de Winterland (Minecraft <span data-bind="server.version">1.20.1</span>). La primera vez, el AutoPack descarga los mods del servidor por ti y te pide reiniciar una vez.</p></div>
       <div class="step rv"><div class="n">04</div><h3>ENTRA AL SERVIDOR</h3><p>Añade el servidor con esta IP: <code data-bind="server.ip">—</code></p></div>
     </div>
     <div class="ipbox rv">
@@ -222,7 +225,7 @@
     <div class="head rv">
       <span class="kicker pixel">Exploración</span>
       <h2 class="title">UN MUNDO NUEVO<br>POR DESCUBRIR</h2>
-      <p class="lead">El mundo se generó desde cero hace muy poco: casi todo está sin explorar. Aquí puedes ver capturas reales del servidor a medida que las vayamos publicando.</p>
+      <p class="lead">El mundo se generó desde cero hace muy poco: casi todo está sin explorar. Sé de los primeros en descubrirlo.</p>
     </div>
     <div class="grid g3">
       <div class="card rv"><div class="ico">⛰️</div><h3>Montañas y cuevas</h3><p>Relieve alto y cuevas de gran tamaño, con ríos que corren bajo tierra.</p></div>
@@ -230,18 +233,6 @@
       <div class="card rv"><div class="ico">🐉</div><h3>Bosses y dragones</h3><p>Jefes con sus propias mazmorras y dragones que dominan sus territorios.</p></div>
     </div>
   </div>
-</section>
-
-<!-- 9. GALERÍA -->
-<section id="galeria">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="kicker pixel">Galería</span>
-      <h2 class="title">MOMENTOS DEL SERVIDOR</h2>
-    </div>
-    <div class="gallery" id="gallery" aria-live="polite"><p class="empty">Cargando galería…</p></div>
-  </div>
-  <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada"><img alt=""></div>
 </section>
 
 <!-- 13. NOVEDADES -->
@@ -263,11 +254,11 @@
       <h2 class="title">FAQ</h2>
     </div>
     <div class="faq">
-      <details class="rv"><summary>¿Qué necesito para jugar?</summary><div class="a">Minecraft Java Edition <span data-bind="server.version">1.20.1</span> y el AutoPack. Nada más.</div></details>
-      <details class="rv"><summary>¿Tengo que descargar los mods individualmente?</summary><div class="a">No. El AutoPack trae todo lo necesario para entrar al servidor.</div></details>
+      <details class="rv"><summary>¿Qué necesito para jugar?</summary><div class="a">Minecraft Java Edition <span data-bind="server.version">1.20.1</span>, el modpack <a href="#" data-href="modpack.url" data-newtab>Winterland <span data-bind="modpack.version">9.6.0</span></a> de CurseForge y el AutoPack. Los mods del servidor los descarga el AutoPack por ti.</div></details>
+      <details class="rv"><summary>¿Tengo que descargar los mods individualmente?</summary><div class="a">No. El AutoPack descarga los mods del servidor por ti la primera vez que entras.</div></details>
       <details class="rv"><summary>¿Puedo jugar con mis amigos?</summary><div class="a">Sí. Puedes crear un equipo de hasta 4 jugadores, compartir homes y territorio, y usar TPA para reuniros.</div></details>
       <details class="rv"><summary>¿Cuál es la IP?</summary><div class="a"><code data-bind="server.ip">—</code> &nbsp; <button class="btn btn-sm" type="button" data-copy-ip>COPIAR IP</button></div></details>
-      <details class="rv"><summary>¿Qué versión utiliza?</summary><div class="a">Minecraft <span data-bind="server.version">1.20.1</span> (<span data-bind="server.loader">Forge</span>). El AutoPack ya lo configura por ti.</div></details>
+      <details class="rv"><summary>¿Qué versión utiliza?</summary><div class="a">Minecraft <span data-bind="server.version">1.20.1</span> (<span data-bind="server.loader">Forge</span>). Se juega desde el perfil de <a href="#" data-href="modpack.url" data-newtab>Winterland <span data-bind="modpack.version">9.6.0</span></a>.</div></details>
       <details class="rv"><summary>¿Dónde descargo el AutoPack?</summary><div class="a"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div></details>
       <details class="rv"><summary>¿Cómo creo mi cuenta en el servidor?</summary><div class="a">La primera vez que entres escribe <code>/register contraseña contraseña</code>. Después, en cada sesión, <code>/login contraseña</code>.</div></details>
       <details class="rv"><summary>¿Dónde puedo pedir ayuda?</summary><div class="a">En nuestro <a href="#comunidad">Discord</a>: allí también se publica el estado del servidor.</div></details>

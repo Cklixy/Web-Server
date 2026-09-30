@@ -11,7 +11,7 @@ Web/
 ├─ serve.mjs              Servidor local SOLO para previsualizar: node serve.mjs → http://127.0.0.1:4173
 └─ site/                  Lo que se publica
    ├─ index.html          Inicio: hero, AutoPack, cómo jugar, servidor, características, equipos, derribo,
-   │                      exploración, galería, novedades, FAQ, comunidad
+   │                      exploración, novedades, FAQ, comunidad
    ├─ autopack.html       Descarga (versión / fecha / tamaño / botón) + historial
    ├─ reglas.html         Reglas por categorías
    ├─ css/style.css       Tokens de diseño arriba; responsive al final
@@ -20,8 +20,7 @@ Web/
    │  ├─ site.json        nombre, IP, versión, enlace del AutoPack, Discord, estado de funciones
    │  ├─ news.json        novedades
    │  ├─ rules.json       reglas
-   │  └─ gallery.json     galería (rutas a assets/screens/)
-   └─ assets/             server-icon.png (real), favicon.svg, og.png (vista previa para redes), screens/
+   └─ assets/             server-icon.png (real), favicon.svg, og.png (vista previa para redes)
 ```
 
 Los HTML solo tienen la estructura; **todo dato variable se lee de `data/*.json`** (con `textContent`, nunca como HTML).
@@ -36,7 +35,6 @@ Los enlaces solo se aceptan si son `https://`.
 | Poner el Discord | `data/site.json` → `community.discord` |
 | Anunciar algo | `data/news.json` (fecha `AAAA-MM-DD`; se ordena solo, se muestran las 5 últimas) |
 | Cambiar reglas | `data/rules.json` |
-| Poner capturas reales | copiar a `assets/screens/` y rellenar `src` en `data/gallery.json` (WebP, ~1600 px) |
 | Activar el derribo / las colonias | `data/site.json` → `features.derribo` / `features.colonias` = `"live"` (quita el aviso PRÓXIMAMENTE) |
 
 Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una etiqueta de placeholder.
@@ -53,17 +51,13 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
 | **Derribo y reanimación** | **En desarrollo, sin desplegar** → `soon` | código sin commitear en `winterlandteams/.../downed` |
 | **Colonias (MineColonies)** | **Probado en TestServer, sin desplegar** → `soon` | pendiente de aprobación |
 
-## Datos que faltan (placeholders identificados en la web)
+## Estado de los datos
 
-1. **Enlace de descarga del AutoPack** — hoy **no existe un "AutoPack" como archivo único**: el jugador instala el modpack
-   Winterland 9.6.0 (CurseForge) + el mod AutoModpack, y este descarga el resto. Hay que crear/alojar el paquete (p. ej.
-   un instalador o una instancia lista) y poner su URL. Hasta entonces el botón dice *DESCARGA PRÓXIMAMENTE*.
-2. **Versión, fecha y tamaño del AutoPack.**
-3. **Invitación del Discord.**
-4. **Capturas reales** (la galería muestra placeholders marcados).
-5. **Dominio público de la web** — sustituir `TU-DOMINIO` en `og:image` de los 3 HTML.
-6. **Reglas**: solo existen las 5 del tablón del lobby; las categorías PvP, Equipos y Bugs/exploits están "Por definir".
-7. **IP**: se usa `orgiadecembrina.duckdns.org` (la que documenta el servidor). Confirmar antes de publicar.
+- **AutoPack** = el mod AutoModpack 4.0.6 (Forge 1.20.1, 14,7 MB, CurseForge). Se instala **dentro del perfil del modpack Winterland 9.6.0**
+  (así lo documenta el servidor); por eso los pasos de «Cómo jugar» mencionan Winterland. Enlaces en `data/site.json` (`autopack`, `modpack`).
+- Discord y dominio público (`server-sand-rho.vercel.app`) configurados; IP pública mostrada a propósito (decisión del dueño).
+- La web **no tiene galería**: se eliminó por decisión del dueño.
+- **Reglas**: solo existen las 5 del tablón del lobby; las categorías PvP, Equipos y Bugs/exploits siguen "Por definir".
 
 ## Seguridad y rendimiento
 
@@ -75,7 +69,6 @@ Campo vacío = se muestra `[PENDIENTE]` y el botón queda desactivado con una et
 - Peso: ~60 KB de HTML+CSS+JS (sin comprimir), sin imágenes de fondo (montañas, auroras, estrellas y nieve son SVG/CSS/canvas propios),
   nieve pausada cuando no se ve y desactivada con `prefers-reduced-motion`. Única dependencia externa: Google Fonts
   (Outfit + Silkscreen, `display=swap`). Para eliminarla, descárgalas a `assets/fonts/` y cambia el `<link>` y la CSP.
-- Imágenes de la galería: usa WebP/AVIF y `loading="lazy"` ya viene puesto.
 
 ## Previsualizar
 

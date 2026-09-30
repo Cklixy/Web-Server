@@ -10,14 +10,19 @@
     "capacity": "16 jugadores"
   },
   "autopack": {
-    "url": "",
-    "version": "",
-    "updated": "",
-    "size": "",
-    "history": []
+    "url": "https://www.curseforge.com/minecraft/mc-mods/automodpack/download/8606571",
+    "version": "4.0.6",
+    "updated": "9 de agosto de 2026",
+    "size": "14,7 MB",
+    "history": [
+      {
+        "version": "4.0.6",
+        "date": "2026-08-09"
+      }
+    ]
   },
   "community": {
-    "discord": ""
+    "discord": "https://discord.gg/hqyKAYfjtb"
   },
   "features": {
     "derribo": "soon",
@@ -26,5 +31,10 @@
   "derribo": {
     "downedSeconds": 30,
     "reviveSeconds": 5
+  },
+  "modpack": {
+    "name": "Winterland",
+    "version": "9.6.0",
+    "url": "https://www.curseforge.com/minecraft/modpacks/winterland-a-magical-christmas-journey"
   }
 }
