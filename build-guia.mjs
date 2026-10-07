@@ -1,8 +1,8 @@
 // Genera site/guia.html a partir de la guía del jugador (Markdown) con la cabecera, menú y pie de villa.html.
 // Uso: node build-guia.mjs   (sitio estatico: el resultado es HTML plano, sin scripts ni estilos en linea)
 import fs from 'node:fs';
-const SRC = 'C:/Minecraft/Auditoria-Winterland/13-GUIA-DEL-JUGADOR.md';
-const md = fs.readFileSync(SRC, 'utf8').split('\r').join('').split('\n');
+const SRCS = ['A', 'B', 'C'].map((x) => 'C:/Minecraft/Auditoria-Winterland/guia-web/' + x + '.md');
+const md = SRCS.map((p) => fs.readFileSync(p, 'utf8')).join(String.fromCharCode(10)).split(String.fromCharCode(13)).join('').split(String.fromCharCode(10));
 const esc = (s) => s.split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;');
 function inline(t) {
   let s = esc(t);
@@ -25,6 +25,7 @@ while (i < md.length) {
   const l = md[i];
   if (l.startsWith('# ')) { i++; continue; }
   if (l.trim() === '---' || l.trim() === '') { closeList(); i++; continue; }
+  if (l.startsWith(String.fromCharCode(96).repeat(3))) { closeList(); const buf = []; i++; while (i < md.length && !md[i].startsWith(String.fromCharCode(96).repeat(3))) { buf.push(md[i]); i++; } i++; html += '<pre class="g-pre">' + esc(buf.join(String.fromCharCode(10))) + '</pre>' + String.fromCharCode(10); continue; }
   if (l.startsWith('## ')) { closeList(); const t = l.slice(3).trim(); const id = slug(t); toc.push([id, t]); html += `<h2 id="${id}" class="g-h2">${inline(t)}</h2>\n`; i++; continue; }
   if (l.startsWith('### ')) { closeList(); html += `<h3 class="g-h3">${inline(l.slice(4).trim())}</h3>\n`; i++; continue; }
   if (l.startsWith('> ')) { closeList(); html += `<div class="g-note">${inline(l.slice(2))}</div>\n`; i++; continue; }
@@ -54,14 +55,14 @@ head = head.split('La villa | ORGIADECEMBRINA').join('Guía del jugador | ORGIAD
   .split('<li><a href="villa.html" aria-current="page">VILLA</a></li>').join('<li><a href="villa.html">VILLA</a></li>\n      <li><a href="guia.html" aria-current="page">GUÍA</a></li>')
   .split('<script src="js/villa.js" defer></script>').join('');
 const foot2 = foot.split('<a href="villa.html">Villa</a>').join('<a href="villa.html">Villa</a><a href="guia.html">Guía</a>');
-const tocHtml = '<nav class="g-toc" aria-label="Índice de la guía">' + toc.map(([id, t]) => `<a href="#${id}">${esc(t.split('·')[0].trim())}</a>`).join('') + '</nav>';
+const tocHtml = '<nav class="g-toc" aria-label="Índice de la guía">' + toc.map(([id, t]) => `<a href="#${id}">${esc(t.split(String.fromCharCode(40))[0].trim().split(String.fromCharCode(183))[0].trim())}</a>`).join('') + '</nav>';
 const main = `<main id="contenido">
 
 <section class="page-hero">
   <div class="wrap">
     <span class="kicker pixel">Del primer día al endgame</span>
     <h1 class="title" data-size="lg">GUÍA DEL JUGADOR</h1>
-    <p class="lead mx">Un mundo de invierno eterno, 250 mods y unos 16 amigos. Aquí tienes qué hacer en cada etapa.</p>
+    <p class="lead mx">Un mundo de invierno eterno, 250 mods y unos 16 amigos. Todo lo que necesitas saber, del primer minuto al último reto.</p>
   </div>
 </section>
 <section>
@@ -97,6 +98,7 @@ if (!css.includes('/* ---- Guia del jugador ---- */')) {
 .g-note { margin: 18px 0; padding: 14px 18px; border-radius: 12px; border: 1px dashed rgba(255, 207, 138, .5); background: rgba(255, 207, 138, .06); color: #ffe6c2; font-size: .95rem; }
 .g-table { margin: 14px 0 22px; }
 .g-wrap code { font: 600 .85em var(--font-body); background: rgba(143, 216, 255, .1); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--ice); }
+.g-pre { margin: 14px 0 22px; padding: 16px 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255, 255, 255, .04); color: var(--ice); font: 500 .9rem/1.5 var(--font-body); overflow-x: auto; white-space: pre; }
 .g-table td, .g-table th { white-space: normal; vertical-align: top; }
 `;
   fs.writeFileSync('site/css/style.css', css);
