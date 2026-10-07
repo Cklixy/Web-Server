@@ -46,15 +46,14 @@ while (i < md.length) {
 }
 closeList();
 
-const v = fs.readFileSync('site/villa.html', 'utf8');
+const v = fs.readFileSync('site/reglas.html', 'utf8');
 let head = v.slice(0, v.indexOf('<main id="contenido">'));
-const foot = v.slice(v.indexOf('</main>') + '</main>'.length);
-head = head.split('La villa | ORGIADECEMBRINA').join('Guía del jugador | ORGIADECEMBRINA')
-  .split('Mapa de la villa comercial de ORGIADECEMBRINA: 28 parcelas numeradas, cómo vender y cómo comprar entre jugadores.').join('Guía completa para jugar en ORGIADECEMBRINA: del primer día al endgame.')
-  .split('server-sand-rho.vercel.app/villa').join('server-sand-rho.vercel.app/guia')
-  .split('<li><a href="villa.html" aria-current="page">VILLA</a></li>').join('<li><a href="villa.html">VILLA</a></li>\n      <li><a href="guia.html" aria-current="page">GUÍA</a></li>')
-  .split('<script src="js/villa.js" defer></script>').join('');
-const foot2 = foot.split('<a href="villa.html">Villa</a>').join('<a href="villa.html">Villa</a><a href="guia.html">Guía</a>');
+const foot2 = v.slice(v.indexOf('</main>') + '</main>'.length);
+head = head.split('Reglas | ORGIADECEMBRINA').join('Guía del jugador | ORGIADECEMBRINA')
+  .split('Reglas del servidor de Minecraft ORGIADECEMBRINA.').join('Guía completa para jugar en ORGIADECEMBRINA: del primer día al endgame.')
+  .split('server-sand-rho.vercel.app/reglas').join('server-sand-rho.vercel.app/guia')
+  .split('<a href="reglas.html" aria-current="page">REGLAS</a>').join('<a href="reglas.html">REGLAS</a>')
+  .split('<li><a href="guia.html">GUÍA</a></li>').join('<li><a href="guia.html" aria-current="page">GUÍA</a></li>');
 const tocHtml = '<nav class="g-toc" aria-label="Índice de la guía">' + toc.map(([id, t]) => `<a href="#${id}">${esc(t.split(String.fromCharCode(40))[0].trim().split(String.fromCharCode(183))[0].trim())}</a>`).join('') + '</nav>';
 const main = `<main id="contenido">
 
@@ -74,15 +73,6 @@ const main = `<main id="contenido">
 </main>`;
 fs.writeFileSync('site/guia.html', head + main + foot2);
 
-// menu y pie en las demas paginas (una sola vez)
-for (const f of ['index.html', 'autopack.html', 'reglas.html', 'villa.html']) {
-  const p = 'site/' + f; let t = fs.readFileSync(p, 'utf8');
-  if (!t.includes('guia.html')) {
-    t = t.replace(/(<li><a href="(?:index\.html)?villa\.html"[^>]*>VILLA<\/a><\/li>)/, '$1\n      <li><a href="guia.html">GUÍA</a></li>')
-      .replace(/(<a href="villa\.html">Villa<\/a>)/, '$1<a href="guia.html">Guía</a>');
-    fs.writeFileSync(p, t);
-  }
-}
 let css = fs.readFileSync('site/css/style.css', 'utf8');
 if (!css.includes('/* ---- Guia del jugador ---- */')) {
   css += `
