@@ -14,6 +14,7 @@ Web/
    │                      exploración, novedades, FAQ, comunidad
    ├─ autopack.html       Descarga (versión / fecha / tamaño / botón) + historial
    ├─ reglas.html         Reglas por categorías
+   ├─ villa.html          Mapa de la villa (28 parcelas), guía de compra/venta y tabla; datos en data/villa.json, dibujo en js/villa.js
    ├─ css/style.css       Tokens de diseño arriba; responsive al final
    ├─ js/main.js          Nav, animaciones, copiar IP, nieve/estrellas, lectura de los JSON
    ├─ data/               CONTENIDO EDITABLE sin reconstruir nada

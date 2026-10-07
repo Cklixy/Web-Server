@@ -339,3 +339,49 @@ h1.title[data-size="lg"] { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 9
 .fp .mt32 { margin-top: 22px; }
 .fp-note { margin: 22px auto 0; max-width: 60ch; color: var(--gold); font-size: .95rem; }
 .fp-note b { color: #fff; }
+
+/* ---- La villa (mapa y guía) ---- */
+.vm-legend { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; margin: 0 0 18px; font-size: .92rem; color: var(--muted); }
+.lg-item { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.sw.st-mayor { background: #4a9be0; } .sw.st-mercado { background: #34b47c; } .sw.st-artesanos { background: #d9923a; } .sw.st-nueva { background: #a272cc; }
+.vm { border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-2); box-shadow: var(--shadow); overflow: hidden; }
+.vm svg { width: 100%; height: auto; }
+.vm-bg { fill: var(--bg-2); }
+.vm-land { fill: #17213a; stroke: var(--red-2); stroke-width: 2; }
+.vm-grid { stroke: rgba(160, 200, 255, .12); stroke-width: 1; }
+.vm-axis { fill: var(--muted); font: 600 11px var(--font-body); }
+.vm-plaza { fill: #2a3350; stroke: var(--red-2); stroke-width: 2; }
+.vm-plot rect { stroke: #fff; stroke-width: 1.5; fill-opacity: .88; }
+.vm-plot:hover rect { fill-opacity: 1; stroke-width: 3; }
+.vm-plot rect.st-mayor { fill: #4a9be0; } .vm-plot rect.st-mercado { fill: #34b47c; } .vm-plot rect.st-artesanos { fill: #d9923a; } .vm-plot rect.st-nueva { fill: #a272cc; }
+.vm-num { fill: #fff; font: 800 14px var(--font-display); pointer-events: none; }
+.vm-num.big { font-size: 17px; }
+.vm-note { text-align: center; color: var(--muted); font-size: .88rem; margin: 12px 0 0; }
+.vm-guide { grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
+.vm-list { margin: 0 0 14px; padding-left: 1.2em; color: var(--muted); }
+.vm-list li { margin: .45em 0; }
+.vm-list b, .card p b { color: #fff; }
+.vm-list code, .card p code { font: 600 .85em var(--font-body); background: rgba(143, 216, 255, .1); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--ice); }
+.vm-h { font-size: 1.6rem; margin: 46px 0 16px; }
+.vm-table { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--glass); }
+.vm-table table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.vm-table th, .vm-table td { padding: 9px 14px; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--line); }
+.vm-table th { color: var(--muted); font: 600 .78rem var(--font-display); letter-spacing: .08em; text-transform: uppercase; }
+.vm-table td.num { color: #fff; font-weight: 800; }
+.vm-table tr:last-child td { border-bottom: 0; }
+@media (max-width: 900px) { .vm-guide { grid-template-columns: 1fr; } }
+
+/* ---- Guia del jugador ---- */
+.g-wrap { max-width: 920px; }
+.g-toc { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 30px; }
+.g-toc a { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass); color: var(--muted); font: 600 .78rem var(--font-display); letter-spacing: .08em; }
+.g-toc a:hover { color: #fff; border-color: rgba(160, 200, 255, .4); }
+.g-h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin: 52px 0 14px; padding-top: 6px; border-top: 1px solid var(--line); }
+.g-h3 { font-size: 1.15rem; margin: 26px 0 8px; color: var(--ice); }
+.g-wrap p { color: var(--muted); }
+.g-wrap p b, .g-wrap li b { color: #fff; }
+.g-note { margin: 18px 0; padding: 14px 18px; border-radius: 12px; border: 1px dashed rgba(255, 207, 138, .5); background: rgba(255, 207, 138, .06); color: #ffe6c2; font-size: .95rem; }
+.g-table { margin: 14px 0 22px; }
+.g-wrap code { font: 600 .85em var(--font-body); background: rgba(143, 216, 255, .1); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--ice); }
+.g-table td, .g-table th { white-space: normal; vertical-align: top; }

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La villa | ORGIADECEMBRINA</title>
+<meta name="description" content="Mapa de la villa comercial de ORGIADECEMBRINA: 28 parcelas numeradas, cómo vender y cómo comprar entre jugadores.">
+<meta name="theme-color" content="#060a14">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/server-icon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/server-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://server-sand-rho.vercel.app/villa">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://server-sand-rho.vercel.app/villa">
+<meta property="og:title" content="La villa | ORGIADECEMBRINA">
+<meta property="og:description" content="Mapa de la villa comercial de ORGIADECEMBRINA: 28 parcelas numeradas, cómo vender y cómo comprar entre jugadores.">
+<meta property="og:image" content="https://server-sand-rho.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+<script src="js/villa.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html#inicio" aria-label="ORGIADECEMBRINA, inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#inicio">INICIO</a></li>
+      <li><a href="index.html#servidor">SERVIDOR</a></li>
+      <li><a href="index.html#caracteristicas">CARACTERÍSTICAS</a></li>
+      <li><a href="index.html#como-jugar">CÓMO JUGAR</a></li>
+      <li><a href="autopack.html">AUTOPACK</a></li>
+      <li><a href="reglas.html">REGLAS</a></li>
+      <li><a href="villa.html" aria-current="page">VILLA</a></li>
+      <li><a href="guia.html">GUÍA</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#comunidad">COMUNIDAD</a></li>
+      <li class="play"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">JUGAR AHORA</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker pixel">Comercio entre jugadores</span>
+    <h1 class="title" data-size="lg">LA VILLA</h1>
+    <p class="lead mx">28 parcelas para montar tu puesto, vender lo que quieras y comprar a otros jugadores. Centro en X 1408, Z 1340.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="vm-legend" id="villa-legend"></div>
+    <div class="vm" id="villa-map" role="region" aria-label="Mapa de la villa"><p class="empty">Cargando mapa…</p></div>
+    <p class="vm-note">Norte arriba, la Z crece hacia abajo. Pasa el ratón por una parcela para ver sus datos.</p>
+
+    <div class="grid g2 vm-guide">
+      <article class="card">
+        <h3>Vender</h3>
+        <ol class="vm-list">
+          <li>Pide una parcela a un admin: te la asignan con <code>/villa assign</code>.</li>
+          <li>En tu parcela pon un <b>cofre o barril</b> (solo los de vanilla) y mete lo que vendas.</li>
+          <li>Mira el cofre a menos de 6 bloques y escribe <code>/puesto crear</code>. Ponle nombre con <code>/puesto nombre texto</code>.</li>
+          <li>Mirando el cofre, <code>/puesto</code> abre tu panel: fija el precio por unidad de cada objeto.</li>
+          <li>Mira tus ventas con <code>/puesto ventas</code> y tus puestos con <code>/puesto lista</code>. Para quitarlo, <code>/puesto borrar</code>: el cofre se queda.</li>
+        </ol>
+        <p>El dinero llega <b>directo a tu cuenta</b> en cuanto alguien compra. Sin impuestos.</p>
+      </article>
+      <article class="card">
+        <h3>Comprar</h3>
+        <ol class="vm-list">
+          <li>Ve al puesto de otro jugador. Busca su parcela en el mapa o en la tabla.</li>
+          <li>Haz <b>clic derecho</b> sobre su cofre: se abre el menú de tienda.</li>
+          <li>Elige el objeto y compra <b>1, 16 o 64</b> unidades.</li>
+        </ol>
+        <p>Se comprueban dinero, espacio y existencias: si algo falla, no se cobra nada. No puedes comprarte a ti mismo.</p>
+      </article>
+      <article class="card">
+        <h3>Reglas de la villa</h3>
+        <ul class="vm-list">
+          <li>Solo el dueño abre su cofre con normalidad.</li>
+          <li>Dentro de la villa no hay PvP, ni daño de explosiones ni fuego.</li>
+          <li>Hay un margen de 8 bloques alrededor sin construir.</li>
+          <li>Las cajas de shulker con contenido no se pueden vender.</li>
+          <li>El precio es por tipo de objeto, con sus datos: dos espadas con distinto encantamiento tienen precios distintos.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Te serán útiles</h3>
+        <ul class="vm-list">
+          <li><code>/villa mi</code>: dónde está tu parcela.</li>
+          <li><code>/villa aqui</code>: en qué parcela estás.</li>
+          <li><code>/shop</code> y <code>/sell</code>: son aparte, venden al servidor y no a otros jugadores.</li>
+        </ul>
+      </article>
+    </div>
+
+    <h2 class="vm-h">Las 28 parcelas</h2>
+    <div class="vm-table">
+      <table>
+        <thead><tr><th>#</th><th>Calle</th><th>Tamaño</th><th>Medidas</th><th>Categoría</th><th>X</th><th>Z</th><th>Centro</th></tr></thead>
+        <tbody id="villa-rows"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html#inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+      <nav aria-label="Pie"><a href="autopack.html">AutoPack</a><a href="reglas.html">Reglas</a><a href="villa.html">Villa</a><a href="guia.html">Guía</a><a href="index.html#faq">FAQ</a><a href="index.html#comunidad">Comunidad</a></nav>
+    </div>
+    <p class="legal">Sitio no oficial de Minecraft. No está afiliado a Mojang Studios ni a Microsoft. Minecraft es una marca de Mojang Studios.</p>
+  </div>
+</footer>
+
+<div class="mcta"><a class="btn btn-primary" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div>
+</body>
+</html>

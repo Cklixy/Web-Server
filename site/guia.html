@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía del jugador | ORGIADECEMBRINA</title>
+<meta name="description" content="Guía completa para jugar en ORGIADECEMBRINA: del primer día al endgame.">
+<meta name="theme-color" content="#060a14">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/server-icon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/server-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://server-sand-rho.vercel.app/guia">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://server-sand-rho.vercel.app/guia">
+<meta property="og:title" content="Guía del jugador | ORGIADECEMBRINA">
+<meta property="og:description" content="Guía completa para jugar en ORGIADECEMBRINA: del primer día al endgame.">
+<meta property="og:image" content="https://server-sand-rho.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html#inicio" aria-label="ORGIADECEMBRINA, inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#inicio">INICIO</a></li>
+      <li><a href="index.html#servidor">SERVIDOR</a></li>
+      <li><a href="index.html#caracteristicas">CARACTERÍSTICAS</a></li>
+      <li><a href="index.html#como-jugar">CÓMO JUGAR</a></li>
+      <li><a href="autopack.html">AUTOPACK</a></li>
+      <li><a href="reglas.html">REGLAS</a></li>
+      <li><a href="villa.html">VILLA</a></li>
+      <li><a href="guia.html" aria-current="page">GUÍA</a></li>
+      <li><a href="guia.html">GUÍA</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#comunidad">COMUNIDAD</a></li>
+      <li class="play"><a class="btn btn-primary btn-sm" href="autopack.html#descargar">JUGAR AHORA</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker pixel">Del primer día al endgame</span>
+    <h1 class="title" data-size="lg">GUÍA DEL JUGADOR</h1>
+    <p class="lead mx">Un mundo de invierno eterno, 250 mods y unos 16 amigos. Aquí tienes qué hacer en cada etapa.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap g-wrap">
+    <nav class="g-toc" aria-label="Índice de la guía"><a href="#introduccion">INTRODUCCIÓN</a><a href="#dia-1">DÍA 1</a><a href="#early-game-semana-1">EARLY GAME</a><a href="#mid-game-semanas-2-4">MID GAME</a><a href="#late-game-semanas-4-8">LATE GAME</a><a href="#endgame">ENDGAME</a><a href="#post-endgame">POST-ENDGAME</a></nav>
+    <p><i>Una guía para jugar bien desde el primer minuto hasta el último reto. Está escrita para los jugadores: sin tecnicismos del servidor.</i></p>
+<h2 id="introduccion" class="g-h2">INTRODUCCIÓN</h2>
+<p><b>Qué es esto.</b> Un mundo de <b>invierno eterno</b> (Minecraft 1.20.1, Forge) con <b>250 mods</b>: jefes enormes, dragones, tecnología (Create), cocina, construcción, Navidad y una <b>Villa Comercial</b> donde los jugadores se compran y venden cosas entre sí. Somos unos <b>16 amigos</b>: se juega <b>mejor en equipo</b>, pero hay mucho que hacer en solitario.</p>
+<p><b>El mundo es un archipiélago.</b> La mitad del mapa es mar. Hay siete grandes masas de tierra; tú empiezas en una (la <b>Isla del Spawn</b>). Para llegar a las demás necesitarás un <b>barco</b>, un <b>waystone</b> o volar.</p>
+<p><b>Las reglas</b> (del lobby): <i>No griefing · No robar · No cheats ni hacks · Respeta a los demás · Diviértete.</i></p>
+<h3 class="g-h3">Comandos que debes conocer</h3>
+<div class="vm-table g-table"><table><thead><tr><th>Para…</th><th>Comando</th></tr></thead><tbody><tr><td>Entrar</td><td><code>/register &lt;clave&gt; &lt;clave&gt;</code> (1.ª vez) · <code>/login &lt;clave&gt;</code></td></tr><tr><td>Dinero</td><td><code>/dinero</code> · <code>/pay &lt;jugador&gt; &lt;cantidad&gt;</code> · <code>/baltop</code> · <code>/daily</code> (cada día, ¡mejor si es seguido!)</td></tr><tr><td>Equipo</td><td><code>/equipo create &lt;nombre&gt;</code> · <code>invite</code> · <code>accept</code> · <code>claim</code> · <code>info</code></td></tr><tr><td>Casa y viajes</td><td><code>/home set &lt;nombre&gt;</code> · <code>/home</code> · <code>/tpa &lt;jugador&gt;</code> · <code>/tpaccept</code></td></tr><tr><td>Trabajar</td><td><code>/jobs</code> (elige 2)</td></tr><tr><td>Comprar y vender</td><td><code>/shop</code> · <code>/sell hand</code> · <code>/sell all</code></td></tr><tr><td>Villa</td><td><code>/villa mi</code> · <code>/villa aqui</code> · <code>/puesto</code></td></tr><tr><td>Diversión</td><td><code>/casino</code> · <code>/ruleta</code> · <code>/skin &lt;nombre&gt;</code></td></tr></tbody></table></div>
+<div class="g-note"><b>Moneda:</b> <b>Copos ❄</b>. Empiezas con <b>500</b>. El <b>libro de misiones</b> (tecla <b>Q</b> por defecto) te guía y da dinero.</div>
+<h2 id="dia-1" class="g-h2">DÍA 1</h2>
+<p><b>Qué hacer</b></p>
+<ol class="vm-list"><li><b>Regístrate</b>, mira las reglas en el <b>Lobby</b> y cruza el <b>arco</b> hasta el <b>campamento de bienvenida</b>.</li><li>Cobra tu <b><code>/daily</code></b> y abre el <b>libro de misiones</b> → <b>Capítulo 1: El comienzo</b>.</li><li>Crea o únete a un <b>equipo</b> (<code>/equipo create</code>): compartiréis casa, terreno y misiones.</li><li>Elige <b>dos trabajos</b> con <code>/jobs</code>: <b>Leñador</b> y <b>Minero</b> son los mejores para empezar.</li><li>Madera → mesa → pico → piedra → <b>horno</b> → antorchas → comida → <b>cama</b> → <b>hierro</b> → <b>armadura de hierro</b>.</li><li>Marca tu base con <code>/home set base</code> y reclama terreno con <code>/equipo claim</code> (lo hace el líder).</li></ol>
+<p><b>Qué conseguir</b></p>
+<ul class="vm-list"><li>8 troncos, pico de piedra, horno, 16 antorchas, 8 panes, cama, <b>8 lingotes de hierro</b>.</li></ul>
+<p><b>Qué evitar</b></p>
+<ul class="vm-list"><li><b>Cavar muy hondo cerca del spawn:</b> hay una <b>Ciudad Antigua</b> a unos 180 bloques al noreste y el <b>Deep Dark</b> cubre casi media isla bajo tierra. Ahí vive el <b>Warden</b>.</li><li><b>El nido de arañas</b> (un bioma con telarañas) de noche.</li><li><b>Pelear contra jefes</b> sin equipo.</li><li>Gastar los 500 ❄ en comida: las misiones y el <code>/daily</code> los reponen.</li></ul>
+<h2 id="early-game-semana-1" class="g-h2">EARLY GAME  ·  <i>semana 1</i></h2>
+<h3 class="g-h3">Supervivencia</h3>
+<ul class="vm-list"><li><b>Come bien:</b> pan, carne asada, patata asada. Con <b>Farmer's Delight</b> cocina estofados (misión del capítulo 2).</li><li><b>Duerme:</b> la cama (o el saco de dormir de <i>Comforts</i>) salta la noche.</li><li><b>Frío:</b> el invierno no se acaba; ten siempre antorchas y refugio.</li></ul>
+<h3 class="g-h3">Minería</h3>
+<ul class="vm-list"><li><b>Hierro:</b> Y 0 a 60. <b>Diamantes:</b> Y −59 a −50 (las cuevas de Tectonic son enormes: lleva agua y bloques).</li><li><b>Cuidado bajo Y −30:</b> casi la mitad del subsuelo es Deep Dark.</li></ul>
+<h3 class="g-h3">Exploración</h3>
+<ul class="vm-list"><li>Visita tu isla: una <b>mazmorra pequeña</b> a ~120 bloques, una <b>mina</b> a ~140, un <b>portal en ruinas</b> a ~180 (tu puerta al Nether) y <b>aldeas</b> a ~600.</li><li>La <b>cámara del Ferrous Wroughtnaut</b> (a ~250) es tu <b>primer jefe</b>: con hierro/diamante y <b>2–3 amigos</b>.</li></ul>
+<h3 class="g-h3">Economía</h3>
+<ul class="vm-list"><li>Gana con <b>trabajos</b>; vende lo que sobre con <code>/sell</code> (la tienda paga poco: es un complemento).</li><li><b>Primeras compras útiles:</b> <b>mochila</b> (600 ❄), <b>waystone</b> (900 ❄), cubo, escudo.</li></ul>
+<h3 class="g-h3">Equipamiento</h3>
+<ul class="vm-list"><li>Cuero → <b>hierro</b>; <b>escudo</b>; <b>arco</b>. Con <b>Better Combat</b> puedes <b>esquivar rodando</b>.</li></ul>
+<p><b>Cuando tengas</b> armadura de hierro, 10+ diamantes, mochila, base con claim y home, el Nether abierto y un jefe, <b>estás listo para el Mid Game</b>.</p>
+<h2 id="mid-game-semanas-2-4" class="g-h2">MID GAME  ·  <i>semanas 2–4</i></h2>
+<h3 class="g-h3">Dungeons</h3>
+<ul class="vm-list"><li><b>Ciudad Antigua</b> (Warden), <b>cementerios de Ice and Fire</b>, <b>fuertes y laberintos de illagers</b>, <b>minas</b> de cada bioma, <b>naufragios y ruinas</b> del mar. Vais <b>de 3 a 4</b>.</li></ul>
+<h3 class="g-h3">Dimensiones</h3>
+<ul class="vm-list"><li><b>Nether:</b> netherita (escombros antiguos), varas de blaze (¡para volar en avión!), fortalezas y bastiones. Lleva resistencia al fuego.</li><li><b>Mares:</b> barco con cofre, comida y cama. El <b>océano helado</b> es de Aquamirae: barcos fantasma.</li></ul>
+<h3 class="g-h3">Jefes</h3>
+<div class="vm-table g-table"><table><thead><tr><th>Jefe</th><th>Cómo</th></tr></thead><tbody><tr><td><b>Ferrous Wroughtnaut</b></td><td>Hierro/diamante, 2–3 jugadores</td></tr><tr><td><b>Guardián Anciano</b></td><td>Respiración acuática, paciencia</td></tr><tr><td><b>Wither</b></td><td>Netherita y pociones, 3–4 jugadores</td></tr><tr><td><b>Capitana Cornelia</b> (barcos fantasma)</td><td>Equipo de 3–4</td></tr><tr><td><b>Warden</b></td><td>4 jugadores, lana y calma</td></tr></tbody></table></div>
+<h3 class="g-h3">Economía avanzada</h3>
+<ul class="vm-list"><li><b>Abre tu puesto en la Villa:</b> pide una parcela a un admin, pon un <b>cofre o barril</b> (de los de Minecraft) y usa <code>/puesto crear</code> → <code>/puesto</code> para poner precios.</li><li><b>Especialízate:</b> comida, minerales, herramientas, madera, plantas, armas, pociones, decoración, ropa, libros.</li><li>Compra a otros lo que no quieras fabricar. <b>Regla de oro:</b> vende por <b>menos de lo que cuesta en <code>/shop</code></b> y por <b>más de lo que paga</b>.</li></ul>
+<h3 class="g-h3">Equipamiento</h3>
+<ul class="vm-list"><li><b>Diamante</b> con Protección III–IV; o el escalón <b>Super</b> (mejora con un bloque Super, que son <b>4 bloques</b> del mineral).</li><li><b>Netherita</b> al final del Mid.</li></ul>
+<h2 id="late-game-semanas-4-8" class="g-h2">LATE GAME  ·  <i>semanas 4–8</i></h2>
+<h3 class="g-h3">Jefes</h3>
+<ul class="vm-list"><li><b>Dragones</b> de fuego, hielo y rayo (Ice and Fire): <b>mejor jóvenes</b>. Cada uno vale <b>4.000 ❄ y 1.000 XP</b> en misiones.</li><li><b>Ender Dragon</b>, <b>Harbinger</b> y los jefes de <b>Cataclysm</b> del Nether y el End.</li></ul>
+<h3 class="g-h3">Dimensiones</h3>
+<ul class="vm-list"><li><b>End:</b> hay <b>una única fortaleza</b>. Llegar a ella es una <b>expedición de varios equipos</b>. Necesitas <b>12 ojos de Ender</b> (se compran, 400 ❄ cada uno).</li></ul>
+<h3 class="g-h3">Colecciones y construcciones</h3>
+<ul class="vm-list"><li><b>Armadura de escamas de dragón</b>, <b>Ignitium</b>, <b>Cursium</b>, <b>Dragonsteel</b>.</li><li><b>Colonia</b> (MineColonies): una por equipo.</li><li><b>Aviones</b>, <b>élitros</b> y <b>barcos grandes</b> para unir las islas.</li></ul>
+<h2 id="endgame" class="g-h2">ENDGAME</h2>
+<h3 class="g-h3">Contenido extremo</h3>
+<ul class="vm-list"><li><b>Super Netherita:</b> cada pieza pide <b>36 lingotes</b> (4 bloques). Es el gran reto de paciencia.</li><li><b>Jefes mayores de Cataclysm:</b> Leviatán, Remnant, Scylla… <i>cuando estén disponibles</i>.</li><li><b>Typhon</b> y los mausoleos de Dread.</li></ul>
+<h3 class="g-h3">Eventos</h3>
+<ul class="vm-list"><li><b>Noches especiales:</b> <b>Superluna</b>, <b>lluvia de meteoritos</b>, <b>eclipse</b> y la rarísima <b>Supernova</b> (da regeneración y visión nocturna a todos). <i>No te matan; sí pueden traer monstruos más fuertes.</i></li><li><b>Ruleta de eventos</b> (cada 20–40 min con 2+ jugadores): TNT, pollos, creepers, hora doble de trabajos…</li></ul>
+<h3 class="g-h3">Economía</h3>
+<ul class="vm-list"><li>Objetos de jefe y de mazmorra <b>no están en la tienda</b>: valen lo que tú y el comprador acordéis.</li><li><b>Sumideros divertidos:</b> netherita (26.000 ❄), mochila de diamante (10.000 ❄), <b>casino</b> (la banca gana ~3–5 %).</li></ul>
+<h3 class="g-h3">Objetivos</h3>
+<ul class="vm-list"><li>🏆 Conseguir tu <b>mejor conjunto</b> · 🗺️ <b>Pisar las 7 masas de tierra</b> · 🏘️ <b>Llenar la Villa</b> · 🎄 <b>Completar el Adviento</b> · ☄️ <b>Sobrevivir una Supernova</b>.</li></ul>
+<h2 id="post-endgame" class="g-h2">POST-ENDGAME</h2>
+<p><b>Contenido infinito:</b></p>
+<ul class="vm-list"><li>🧭 <b>Atlas:</b> descubre los <b>123 biomas</b> y las estructuras del mundo.</li><li>🎒 <b>Colecciones:</b> artefactos, trajes, discos de música, platos navideños.</li><li>🎄 <b>Temporadas:</b> cada invierno, un Adviento nuevo.</li><li>🏗️ <b>Obras comunes:</b> el Faro del Invierno, la ampliación de la Villa.</li><li>🎣 <b>Torneos:</b> pesca, minería, caza, construcción (<code>/jobs top &lt;trabajo&gt;</code>).</li><li>🤝 <b>Mentoría:</b> ayuda a los nuevos (el aldeano guía del Lobby te presenta).</li></ul>
+<p><i>Esta guía parte de lo que el servidor tiene ahora mismo. Si algo no coincide con lo que ves en el juego, avisa a un administrador.</i></p>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html#inicio"><img src="assets/server-icon.png" alt="" width="34" height="34"><span data-bind="server.name">ORGIADECEMBRINA</span></a>
+      <nav aria-label="Pie"><a href="autopack.html">AutoPack</a><a href="reglas.html">Reglas</a><a href="villa.html">Villa</a><a href="guia.html">Guía</a><a href="guia.html">Guía</a><a href="index.html#faq">FAQ</a><a href="index.html#comunidad">Comunidad</a></nav>
+    </div>
+    <p class="legal">Sitio no oficial de Minecraft. No está afiliado a Mojang Studios ni a Microsoft. Minecraft es una marca de Mojang Studios.</p>
+  </div>
+</footer>
+
+<div class="mcta"><a class="btn btn-primary" href="autopack.html#descargar">DESCARGAR AUTOPACK</a></div>
+</body>
+</html>

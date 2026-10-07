@@ -1,0 +1,369 @@
+{
+ "area": {
+  "x1": 1328,
+  "x2": 1488,
+  "z1": 1260,
+  "z2": 1420
+ },
+ "plaza": {
+  "x": 1408,
+  "z": 1340,
+  "r": 13
+ },
+ "streets": [
+  {
+   "key": "mayor",
+   "name": "Calle Mayor"
+  },
+  {
+   "key": "mercado",
+   "name": "Calle del Mercado"
+  },
+  {
+   "key": "artesanos",
+   "name": "Calle de los Artesanos"
+  },
+  {
+   "key": "nueva",
+   "name": "Calle Nueva"
+  }
+ ],
+ "plots": [
+  {
+   "id": 1,
+   "street": "mayor",
+   "kind": "small",
+   "w": 8,
+   "d": 6,
+   "category": "comida",
+   "x1": 1426,
+   "x2": 1433,
+   "z1": 1333,
+   "z2": 1338
+  },
+  {
+   "id": 2,
+   "street": "mayor",
+   "kind": "medium",
+   "w": 9,
+   "d": 8,
+   "category": "minerales",
+   "x1": 1432,
+   "x2": 1440,
+   "z1": 1351,
+   "z2": 1358
+  },
+  {
+   "id": 3,
+   "street": "mayor",
+   "kind": "small",
+   "w": 6,
+   "d": 6,
+   "category": "herramientas",
+   "x1": 1436,
+   "x2": 1441,
+   "z1": 1333,
+   "z2": 1338
+  },
+  {
+   "id": 4,
+   "street": "mayor",
+   "kind": "large",
+   "w": 11,
+   "d": 9,
+   "category": "madera",
+   "x1": 1443,
+   "x2": 1453,
+   "z1": 1347,
+   "z2": 1355
+  },
+  {
+   "id": 5,
+   "street": "mayor",
+   "kind": "medium",
+   "w": 9,
+   "d": 8,
+   "category": "plantas",
+   "x1": 1439,
+   "x2": 1447,
+   "z1": 1324,
+   "z2": 1331
+  },
+  {
+   "id": 6,
+   "street": "mayor",
+   "kind": "small",
+   "w": 8,
+   "d": 6,
+   "category": "armas",
+   "x1": 1457,
+   "x2": 1464,
+   "z1": 1343,
+   "z2": 1348
+  },
+  {
+   "id": 7,
+   "street": "mayor",
+   "kind": "medium",
+   "w": 9,
+   "d": 9,
+   "category": "pociones",
+   "x1": 1450,
+   "x2": 1458,
+   "z1": 1324,
+   "z2": 1332
+  },
+  {
+   "id": 8,
+   "street": "mayor",
+   "kind": "small",
+   "w": 8,
+   "d": 6,
+   "category": "decoración",
+   "x1": 1466,
+   "x2": 1473,
+   "z1": 1346,
+   "z2": 1351
+  },
+  {
+   "id": 9,
+   "street": "mayor",
+   "kind": "large",
+   "w": 12,
+   "d": 9,
+   "category": "ropa",
+   "x1": 1462,
+   "x2": 1473,
+   "z1": 1321,
+   "z2": 1329
+  },
+  {
+   "id": 10,
+   "street": "mercado",
+   "kind": "medium",
+   "w": 9,
+   "d": 10,
+   "category": "libros",
+   "x1": 1400,
+   "x2": 1408,
+   "z1": 1358,
+   "z2": 1367
+  },
+  {
+   "id": 11,
+   "street": "mercado",
+   "kind": "small",
+   "w": 7,
+   "d": 8,
+   "category": "comida",
+   "x1": 1422,
+   "x2": 1428,
+   "z1": 1364,
+   "z2": 1371
+  },
+  {
+   "id": 12,
+   "street": "mercado",
+   "kind": "medium",
+   "w": 9,
+   "d": 10,
+   "category": "minerales",
+   "x1": 1404,
+   "x2": 1412,
+   "z1": 1369,
+   "z2": 1378
+  },
+  {
+   "id": 13,
+   "street": "mercado",
+   "kind": "small",
+   "w": 8,
+   "d": 8,
+   "category": "herramientas",
+   "x1": 1420,
+   "x2": 1427,
+   "z1": 1375,
+   "z2": 1382
+  },
+  {
+   "id": 14,
+   "street": "mercado",
+   "kind": "large",
+   "w": 11,
+   "d": 12,
+   "category": "madera",
+   "x1": 1418,
+   "x2": 1428,
+   "z1": 1384,
+   "z2": 1395
+  },
+  {
+   "id": 15,
+   "street": "mercado",
+   "kind": "medium",
+   "w": 9,
+   "d": 9,
+   "category": "plantas",
+   "x1": 1398,
+   "x2": 1406,
+   "z1": 1384,
+   "z2": 1392
+  },
+  {
+   "id": 16,
+   "street": "mercado",
+   "kind": "small",
+   "w": 7,
+   "d": 7,
+   "category": "armas",
+   "x1": 1417,
+   "x2": 1423,
+   "z1": 1398,
+   "z2": 1404
+  },
+  {
+   "id": 17,
+   "street": "mercado",
+   "kind": "medium",
+   "w": 8,
+   "d": 10,
+   "category": "pociones",
+   "x1": 1400,
+   "x2": 1407,
+   "z1": 1397,
+   "z2": 1406
+  },
+  {
+   "id": 18,
+   "street": "artesanos",
+   "kind": "small",
+   "w": 8,
+   "d": 8,
+   "category": "decoración",
+   "x1": 1394,
+   "x2": 1401,
+   "z1": 1321,
+   "z2": 1328
+  },
+  {
+   "id": 19,
+   "street": "artesanos",
+   "kind": "large",
+   "w": 12,
+   "d": 9,
+   "category": "ropa",
+   "x1": 1379,
+   "x2": 1390,
+   "z1": 1338,
+   "z2": 1346
+  },
+  {
+   "id": 20,
+   "street": "artesanos",
+   "kind": "medium",
+   "w": 9,
+   "d": 8,
+   "category": "libros",
+   "x1": 1371,
+   "x2": 1379,
+   "z1": 1320,
+   "z2": 1327
+  },
+  {
+   "id": 21,
+   "street": "artesanos",
+   "kind": "small",
+   "w": 6,
+   "d": 7,
+   "category": "comida",
+   "x1": 1371,
+   "x2": 1376,
+   "z1": 1336,
+   "z2": 1342
+  },
+  {
+   "id": 22,
+   "street": "artesanos",
+   "kind": "medium",
+   "w": 9,
+   "d": 8,
+   "category": "minerales",
+   "x1": 1359,
+   "x2": 1367,
+   "z1": 1321,
+   "z2": 1328
+  },
+  {
+   "id": 23,
+   "street": "artesanos",
+   "kind": "small",
+   "w": 7,
+   "d": 6,
+   "category": "herramientas",
+   "x1": 1356,
+   "x2": 1362,
+   "z1": 1338,
+   "z2": 1343
+  },
+  {
+   "id": 24,
+   "street": "artesanos",
+   "kind": "large",
+   "w": 11,
+   "d": 10,
+   "category": "madera",
+   "x1": 1347,
+   "x2": 1357,
+   "z1": 1320,
+   "z2": 1329
+  },
+  {
+   "id": 25,
+   "street": "artesanos",
+   "kind": "medium",
+   "w": 9,
+   "d": 8,
+   "category": "plantas",
+   "x1": 1345,
+   "x2": 1353,
+   "z1": 1341,
+   "z2": 1348
+  },
+  {
+   "id": 26,
+   "street": "artesanos",
+   "kind": "large",
+   "w": 13,
+   "d": 9,
+   "category": "madera",
+   "x1": 1331,
+   "x2": 1343,
+   "z1": 1339,
+   "z2": 1347
+  },
+  {
+   "id": 27,
+   "street": "nueva",
+   "kind": "small",
+   "w": 8,
+   "d": 7,
+   "category": "armas",
+   "x1": 1412,
+   "x2": 1419,
+   "z1": 1319,
+   "z2": 1325
+  },
+  {
+   "id": 28,
+   "street": "nueva",
+   "kind": "medium",
+   "w": 8,
+   "d": 9,
+   "category": "pociones",
+   "x1": 1406,
+   "x2": 1413,
+   "z1": 1298,
+   "z2": 1306
+  }
+ ]
+}
