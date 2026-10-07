@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Silkscreen&display=swap">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
+<script src="js/villa.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -143,8 +144,17 @@ Primera noche a salvo</pre>
 <h3 class="g-h3">8.5 El casino (para gastar lo que te sobre)</h3>
 <p><code>/casino</code> abre tragamonedas, ruleta (<b>puedes apostar a varias cosas a la vez</b>), blackjack, coinflip (<code>/coinflip</code>) y lotería semanal (<code>/loteria</code>, sorteo el domingo a las 20:00 hora de Colombia). <b>La banca siempre gana entre un 3 y un 5 %</b>: es entretenimiento, no una forma de ganar dinero.</p>
 <h2 id="9-la-villa-comercial" class="g-h2">9. La Villa Comercial</h2>
+<p><b>La Villa en 5 pasos</b></p>
+<ol class="vm-list"><li><b>Llegas a su plaza</b> al entrar al Survival: es tu punto de partida.</li><li><b>Pide una parcela</b> a un administrador (no se reclaman solas) y compruébala con <code>/villa mi</code>.</li><li><b>Monta tu puesto:</b> cofre o barril de Minecraft en tu parcela → <code>/puesto crear</code> → <code>/puesto</code> para poner precios.</li><li><b>Compra</b> con clic derecho sobre el cofre de otro jugador.</li><li><b>Mira tus ventas</b> con <code>/puesto ventas</code>.</li></ol>
 <h3 class="g-h3">9.1 Qué es</h3>
 <p>Una aldea medieval con una <b>plaza</b> (fuente, <b>árbol de Navidad</b>, campana), <b>cuatro calles curvas</b>, <b>28 parcelas</b>, una <b>posada</b>, un <b>almacén</b> y unos <b>establos</b>. <b>Es tu punto de partida</b>: el arco del Lobby te deja en su plaza. En el mapa aparece como el waypoint <b>"Villa Comercial"</b> (JourneyMap te lo envía solo a los pocos segundos de entrar).</p>
+<h3 class="g-h3">El mapa de la Villa</h3>
+<p>Cada rectángulo es una parcela con su número; el color indica la calle. <b>Pasa el ratón</b> por una parcela para ver su calle, tamaño, categoría y coordenadas.</p>
+<div class="vm-legend" id="villa-legend"></div>
+<div class="vm" id="villa-map" role="region" aria-label="Mapa de la Villa"><p class="empty">Cargando mapa…</p></div>
+<p class="vm-note">Norte arriba, la Z crece hacia abajo. Centro de la plaza: X 1408, Z 1340.</p>
+<h3 class="g-h3">Las 28 parcelas</h3>
+<div class="vm-table g-table"><table><thead><tr><th>#</th><th>Calle</th><th>Tamaño</th><th>Medidas</th><th>Categoría</th><th>X</th><th>Z</th><th>Centro</th></tr></thead><tbody id="villa-rows"></tbody></table></div>
 <h3 class="g-h3">9.2 Cómo conseguir tu parcela</h3>
 <p>Las parcelas <b>las asigna un administrador</b> (nadie las reclama solo). Pídela cuando ya tengas algo que vender. Cuando la tengas, usa <code>/villa mi</code> para ver cuál es.</p>
 <h3 class="g-h3">9.3 Cómo vender (tu puesto)</h3>

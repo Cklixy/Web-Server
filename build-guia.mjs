@@ -26,6 +26,16 @@ while (i < md.length) {
   if (l.startsWith('# ')) { i++; continue; }
   if (l.trim() === '---' || l.trim() === '') { closeList(); i++; continue; }
   if (l.startsWith(String.fromCharCode(96).repeat(3))) { closeList(); const buf = []; i++; while (i < md.length && !md[i].startsWith(String.fromCharCode(96).repeat(3))) { buf.push(md[i]); i++; } i++; html += '<pre class="g-pre">' + esc(buf.join(String.fromCharCode(10))) + '</pre>' + String.fromCharCode(10); continue; }
+  if (l.trim() === '[[MAPA_VILLA]]') {
+    closeList();
+    html += `<div class="vm-legend" id="villa-legend"></div>
+<div class="vm" id="villa-map" role="region" aria-label="Mapa de la Villa"><p class="empty">Cargando mapa…</p></div>
+<p class="vm-note">Norte arriba, la Z crece hacia abajo. Centro de la plaza: X 1408, Z 1340.</p>
+<h3 class="g-h3">Las 28 parcelas</h3>
+<div class="vm-table g-table"><table><thead><tr><th>#</th><th>Calle</th><th>Tamaño</th><th>Medidas</th><th>Categoría</th><th>X</th><th>Z</th><th>Centro</th></tr></thead><tbody id="villa-rows"></tbody></table></div>
+`;
+    i++; continue;
+  }
   if (l.startsWith('## ')) { closeList(); const t = l.slice(3).trim(); const id = slug(t); toc.push([id, t]); html += `<h2 id="${id}" class="g-h2">${inline(t)}</h2>\n`; i++; continue; }
   if (l.startsWith('### ')) { closeList(); html += `<h3 class="g-h3">${inline(l.slice(4).trim())}</h3>\n`; i++; continue; }
   if (l.startsWith('> ')) { closeList(); html += `<div class="g-note">${inline(l.slice(2))}</div>\n`; i++; continue; }
@@ -53,6 +63,7 @@ head = head.split('Reglas | ORGIADECEMBRINA').join('Guía del jugador | ORGIADEC
   .split('Reglas del servidor de Minecraft ORGIADECEMBRINA.').join('Guía completa para jugar en ORGIADECEMBRINA: del primer día al endgame.')
   .split('server-sand-rho.vercel.app/reglas').join('server-sand-rho.vercel.app/guia')
   .split('<a href="reglas.html" aria-current="page">REGLAS</a>').join('<a href="reglas.html">REGLAS</a>')
+  .split('<script src="js/main.js" defer></script>').join('<script src="js/main.js" defer></script>' + String.fromCharCode(10) + '<script src="js/villa.js" defer></script>')
   .split('<li><a href="guia.html">GUÍA</a></li>').join('<li><a href="guia.html" aria-current="page">GUÍA</a></li>');
 const tocHtml = '<nav class="g-toc" aria-label="Índice de la guía">' + toc.map(([id, t]) => `<a href="#${id}">${esc(t.split(String.fromCharCode(40))[0].trim().split(String.fromCharCode(183))[0].trim())}</a>`).join('') + '</nav>';
 const main = `<main id="contenido">
